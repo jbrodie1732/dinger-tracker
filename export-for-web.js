@@ -1,5 +1,5 @@
 // export-for-web.js
-// Run manually after save-daily-snapshot.js to generate public/data/latest.json
+// Run manually after save-daily-snapshot.js to generate docs/data/latest.json
 
 const fs = require("fs");
 const path = require("path");
@@ -15,7 +15,7 @@ const snapshotFile = path.join(
   snapshotDir,
   `${today.toISOString().slice(0, 10)}.json`
 );
-const outputFile = path.join(__dirname, "public", "data", "latest.json");
+const outputFile = path.join(__dirname, "docs", "data", "latest.json");
 
 if (!fs.existsSync(snapshotFile)) {
   console.error("Snapshot not found:", snapshotFile);
