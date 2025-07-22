@@ -1,78 +1,97 @@
-// export-for-web.js
-// Run manually after save-daily-snapshot.js to generate docs/data/latest.json
+const fs = require('fs');
+const path = require('path');
 
-const fs = require("fs");
-const path = require("path");
+const snapshotDir = path.join(__dirname, 'daily-snapshots');
+const outputPath = path.join(__dirname, 'docs', 'data', 'latest.json');
 
-const snapshotDir = path.join(__dirname, "daily-snapshots");
-const playerTotals = require("./player-totals.json");
-const teamTotals = require("./team-totals.json");
-const playerTeamMap = require("./player_team_mapping.json");
+const playerTeamMap = JSON.parse(fs.readFileSync('player_team_mapping.json'));
+const teamTotals = JSON.parse(fs.readFileSync('team-totals.json'));
+const playerTotals = JSON.parse(fs.readFileSync('player-totals.json'));
 
-const today = new Date();
-today.setDate(today.getDate() - 1); // use snapshot from yesterday
-const snapshotFile = path.join(
-  snapshotDir,
-  `${today.toISOString().slice(0, 10)}.json`
-);
-const outputFile = path.join(__dirname, "docs", "data", "latest.json");
-
-if (!fs.existsSync(snapshotFile)) {
-  console.error("Snapshot not found:", snapshotFile);
-  process.exit(1);
+function getPreviousDateString() {
+  const now = new Date();
+  now.setDate(now.getDate() - 1);
+  return now.toISOString().split('T')[0];
 }
 
-const snapshot = JSON.parse(fs.readFileSync(snapshotFile, "utf-8"));
-const updated = new Date().toISOString();
+function loadSnapshot(dateString) {
+  const filePath = path.join(snapshotDir, `${dateString}.json`);
+  if (!fs.existsSync(filePath)) return null;
+  return JSON.parse(fs.readFileSync(filePath));
+}
 
-const teams = Object.entries(snapshot.teamTotals || {}).map(([team, total]) => ({
-  name: team,
-  total
-}));
+function loadAllSnapshots() {
+  const files = fs.readdirSync(snapshotDir);
+  return files
+    .filter(f => f.endsWith('.json'))
+    .map(f => JSON.parse(fs.readFileSync(path.join(snapshotDir, f))));
+}
 
-const players = Object.entries(snapshot.playerTotals || {}).map(
-  ([player, hrs]) => ({
-    player,
-    hrs,
-    team: playerTeamMap[player] || "Unassigned"
-  })
-);
+function formatHeavyLifters(playerTotals, teamTotals) {
+  const heavy = [];
+  for (const [player, total] of Object.entries(playerTotals)) {
+    const team = playerTeamMap[player];
+    const teamTotal = teamTotals[team] || 0;
+    const pct = teamTotal ? (total / teamTotal) : 0;
+    if (pct >= 0.33) {
+      heavy.push({ player, team, hrs: total, pctOfTeam: +(pct * 100).toFixed(1) });
+    }
+  }
+  return heavy;
+}
 
-const heavyLifters = players
-  .filter((p) => {
-    const teamTotal = snapshot.teamTotals?.[p.team] || 0;
-    return teamTotal > 0 && p.hrs / teamTotal >= 0.33;
-  })
-  .map((p) => ({
-    ...p,
-    pctOfTeam: Math.round((p.hrs / snapshot.teamTotals[p.team]) * 100)
-  }));
-
-const spray = (snapshot.homeRuns || []).filter(
-  (hr) => hr.x !== undefined && hr.y !== undefined
-);
-
-const longestHr = spray.reduce((max, hr) =>
-  hr.distance && hr.distance > (max?.distance || 0) ? hr : max,
-  null
-);
-
-const result = {
-  updated,
-  teams: teams.sort((a, b) => b.total - a.total),
-  players: players.sort((a, b) => b.hrs - a.hrs),
-  heavyLifters,
-  spray,
-  longestHr: longestHr
-    ? {
-        player: longestHr.player,
-        distance: longestHr.distance,
-        team: longestHr.team,
-        date: longestHr.timestamp?.slice(0, 10)
+function extractSprayData(allSnapshots) {
+  const spray = [];
+  for (const snap of allSnapshots) {
+    if (!snap.homeRuns) continue;
+    for (const hr of snap.homeRuns) {
+      if (hr.x != null && hr.y != null) {
+        spray.push({
+          player: hr.player,
+          team: playerTeamMap[hr.player],
+          x: hr.x,
+          y: hr.y,
+          distance: hr.distance,
+          date: hr.timestamp?.split('T')[0] || null
+        });
       }
-    : null
-};
+    }
+  }
+  return spray;
+}
 
-fs.mkdirSync(path.dirname(outputFile), { recursive: true });
-fs.writeFileSync(outputFile, JSON.stringify(result, null, 2));
-console.log("✅ Exported latest.json for web dashboard");
+function findLongestHr(spray) {
+  return spray.reduce((max, hr) =>
+    (hr.distance != null && hr.distance > (max.distance || 0)) ? hr : max,
+    {}
+  );
+}
+
+function runExport() {
+  const dateString = getPreviousDateString();
+  const snapshot = loadSnapshot(dateString);
+  if (!snapshot) {
+    console.error('❌ No snapshot found for', dateString);
+    return;
+  }
+
+  const allSnapshots = loadAllSnapshots();
+  const spray = extractSprayData(allSnapshots);
+  const longestHr = findLongestHr(spray);
+  const heavyLifters = formatHeavyLifters(snapshot.playerTotals, snapshot.teamTotals);
+
+  const exportData = {
+    updated: new Date().toISOString(),
+    teams: Object.entries(snapshot.teamTotals).map(([name, total]) => ({ name, total })),
+    players: Object.entries(snapshot.playerTotals).map(([name, total]) => ({ name, total, team: playerTeamMap[name] })),
+    heavyLifters,
+    spray,
+    longestHr
+  };
+
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, JSON.stringify(exportData, null, 2));
+  console.log('✅ Exported latest.json for web dashboard');
+}
+
+runExport();
