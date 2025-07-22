@@ -5,31 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dinger Tracker Dashboard</title>
   <script src="https://cdn.plot.ly/plotly-2.24.0.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: sans-serif; margin: 2rem; }
-    h2 { margin-top: 3rem; }
-    #leaderboard, #spray { max-width: 700px; margin-bottom: 2rem; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f9fafb;
+      color: #111;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #333;
+      margin-top: 0;
+    }
+
+    label, select {
+      font-size: 1rem;
+    }
+
+    select {
+      padding: 6px 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-left: 8px;
+    }
+
+    #leaderboard, #spray {
+      margin: 2rem auto;
+    }
+
+    ul {
+      line-height: 1.6;
+      padding-left: 1.2rem;
+    }
+
+    .flex-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .flex-col {
+      flex: 1;
+      min-width: 300px;
+    }
   </style>
 </head>
 <body>
-  <h1>Dinger Tracker Live Dashboard</h1>
-  <p>Last updated: <span id="updated"></span></p>
+  <div class="container">
+    <h1>🎉 Dinger Tracker Live Dashboard</h1>
+    <p style="text-align:center;">Last updated: <span id="updated"></span></p>
 
-  <h2>🏆 Team Leaderboard</h2>
-  <div id="leaderboard"></div>
+    <h2>🏆 Team Leaderboard</h2>
+    <div id="leaderboard"></div>
 
-  <h2>📍 Spray Chart (All HRs)</h2>
-  <label for="teamFilter">Filter by Team:</label>
-  <select id="teamFilter">
-    <option value="all">All Teams</option>
-  </select>
-  <div id="spray"></div>
+    <h2>🔹 Spray Chart (All HRs)</h2>
+    <div style="text-align:center; margin-bottom: 1rem;">
+      <label for="teamFilter">Filter by Team:</label>
+      <select id="teamFilter">
+        <option value="all">All Teams</option>
+      </select>
+    </div>
+    <div id="spray"></div>
 
-  <h2>🔥 Heavy Lifters (33%+ of Team HRs)</h2>
-  <ul id="heavy"></ul>
-
-  <h2>📏 Longest HR of Season</h2>
-  <p id="longest">Loading...</p>
+    <div class="flex-row">
+      <div class="flex-col">
+        <h2>🔥 Heavy Lifters (33%+ of Team HRs)</h2>
+        <ul id="heavy"></ul>
+      </div>
+      <div class="flex-col">
+        <h2>📏 Longest HR of Season</h2>
+        <p id="longest">Loading...</p>
+      </div>
+    </div>
+  </div>
 
 <script>
 async function loadDashboard() {
@@ -38,7 +100,7 @@ async function loadDashboard() {
 
   document.getElementById('updated').textContent = new Date(data.updated).toLocaleString();
 
-  // Populate leaderboard
+  // Leaderboard
   Plotly.newPlot('leaderboard', [{
     x: data.teams.map(t => t.total),
     y: data.teams.map(t => t.name),
@@ -50,7 +112,7 @@ async function loadDashboard() {
     yaxis: { autorange: 'reversed' }
   });
 
-  // Populate heavy lifters
+  // Heavy lifters
   const heavy = data.heavyLifters.map(p =>
     `<li><strong>${p.player}</strong> (${p.team}) – ${p.hrs} HRs (${p.pctOfTeam}% of team)</li>`
   ).join('');
@@ -62,7 +124,7 @@ async function loadDashboard() {
     ? `${long.player} (${long.team}) – ${long.distance} ft on ${long.date}`
     : 'No data';
 
-  // Spray Chart Filter Logic
+  // Spray chart
   const sprayData = data.spray || [];
   const dropdown = document.getElementById('teamFilter');
   const teams = [...new Set(sprayData.map(d => d.team))].sort();
@@ -91,11 +153,6 @@ async function loadDashboard() {
     }], {
       xaxis: { range: [0, 250], title: 'Spray X' },
       yaxis: { range: [250, 0], title: 'Spray Y' },
-      shapes: [{
-        type: 'path',
-        path: 'M125 0 L200 75 L125 150 L50 75 Z',
-        line: { color: 'gray', width: 2, dash: 'dash' }
-      }],
       height: 600
     });
   }
