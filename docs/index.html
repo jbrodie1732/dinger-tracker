@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+\<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -61,6 +61,24 @@
     .flex-col {
       flex: 1;
       min-width: 300px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .flex-row {
+        flex-direction: column;
+      }
+
+      .flex-col {
+        min-width: 100%;
+      }
     }
   </style>
 </head>
