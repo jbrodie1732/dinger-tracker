@@ -125,7 +125,13 @@
     <h1>🎉 Dinger Tracker Live Dashboard</h1>
     <p style="text-align:center;">Last updated: <span id="updated"></span></p>
 
-    <h2>🏆 Team Leaderboard</h2>
+    <h2>🏆 Current Standings</h2>
+    <table id="standingsTable">
+      <thead>
+        <tr><th>Rank</th><th>Team</th><th>HRs</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
     <div id="leaderboard"></div>
 
     <div id="roster-view">
@@ -155,7 +161,7 @@
 
     <div class="flex-row">
       <div class="flex-col">
-        <h2>🔥 Heavy Lifters (33%+ of Team HRs)</h2>
+        <h2>🔥 2018 LeBron Carry (33%+ of Team HRs)</h2>
         <ul id="heavy"></ul>
       </div>
       <div class="flex-col">
@@ -170,22 +176,48 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark');
 }
 
+function computeRanks(teams) {
+  const sorted = [...teams].sort((a, b) => b.total - a.total);
+  let lastScore = null;
+  let lastRank = 0;
+  let ties = 0;
+  return sorted.map((team, i) => {
+    if (team.total === lastScore) {
+      ties++;
+      return { ...team, rank: `T-${lastRank}` };
+    } else {
+      lastRank = i + 1;
+      ties = 1;
+      lastScore = team.total;
+      return { ...team, rank: `${lastRank}` };
+    }
+  });
+}
+
 async function loadDashboard() {
   const res = await fetch('data/latest.json');
   const data = await res.json();
 
   document.getElementById('updated').textContent = new Date(data.updated).toLocaleString();
 
-  // Leaderboard
+  const rankedTeams = computeRanks(data.teams);
+
+  // Standings Table
+  const standingsTable = document.querySelector('#standingsTable tbody');
+  standingsTable.innerHTML = rankedTeams.map(team => `
+    <tr><td>${team.rank}</td><td>${team.name}</td><td>${team.total}</td></tr>
+  `).join('');
+
+  // Leaderboard chart
   Plotly.newPlot('leaderboard', [{
-    x: data.teams.map(t => t.total),
-    y: data.teams.map(t => t.name),
+    x: rankedTeams.map(t => t.name),
+    y: rankedTeams.map(t => t.total),
     type: 'bar',
-    orientation: 'h',
-    marker: { color: 'MidnightBlue' }
+    marker: { color: 'midnightblue' }
   }], {
-    margin: { l: 80 },
-    yaxis: { autorange: 'reversed' }
+    yaxis: { title: 'Total HRs' },
+    xaxis: { title: 'Team' },
+    margin: { t: 20 }
   });
 
   // Heavy lifters
