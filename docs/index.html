@@ -12,6 +12,7 @@
       --fg-color: #111;
       --card-bg: #fff;
       --border-color: #ccc;
+      --th-bg: #eee;
     }
 
     body.dark {
@@ -19,6 +20,7 @@
       --fg-color: #f0f0f0;
       --card-bg: #2a2a2a;
       --border-color: #444;
+      --th-bg: #333;
     }
 
     body {
@@ -91,7 +93,11 @@
     }
 
     th {
-      background: #eee;
+      background: var(--th-bg);
+    }
+
+    #roster-view {
+      margin-bottom: 3rem;
     }
 
     @media (max-width: 768px) {
@@ -176,7 +182,7 @@ async function loadDashboard() {
     y: data.teams.map(t => t.name),
     type: 'bar',
     orientation: 'h',
-    marker: { color: 'IndianRed' }
+    marker: { color: 'MidnightBlue' }
   }], {
     margin: { l: 80 },
     yaxis: { autorange: 'reversed' }
@@ -249,9 +255,11 @@ async function loadDashboard() {
   rosterSelect.addEventListener('change', (e) => {
     const team = e.target.value;
     if (!team) return rosterTable.style.display = 'none';
-    const players = data.players.filter(p => p.team === team).sort((a, b) => b.total - a.total);
+    const players = data.players
+      .filter(p => p.team === team)
+      .sort((a, b) => b.total - a.total);
     rosterTbody.innerHTML = players.map(p => `
-      <tr><td>${p.player}</td><td>${p.total}</td></tr>
+      <tr><td>${p.name || p.player}</td><td>${p.total}</td></tr>
     `).join('');
     rosterTable.style.display = 'table';
   });
