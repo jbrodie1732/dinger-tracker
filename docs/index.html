@@ -7,26 +7,41 @@
   <script src="https://cdn.plot.ly/plotly-2.24.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg-color: #f9fafb;
+      --fg-color: #111;
+      --card-bg: #fff;
+      --border-color: #ccc;
+    }
+
+    body.dark {
+      --bg-color: #1a1a1a;
+      --fg-color: #f0f0f0;
+      --card-bg: #2a2a2a;
+      --border-color: #444;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
       padding: 2rem;
-      background: #f9fafb;
-      color: #111;
+      background: var(--bg-color);
+      color: var(--fg-color);
+      transition: background 0.3s, color 0.3s;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
       padding: 2rem;
-      background: #fff;
+      background: var(--card-bg);
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
     }
 
     h1, h2 {
       text-align: center;
-      color: #333;
+      color: var(--fg-color);
       margin-top: 0;
     }
 
@@ -38,7 +53,7 @@
       padding: 6px 10px;
       font-size: 1rem;
       border-radius: 5px;
-      border: 1px solid #ccc;
+      border: 1px solid var(--border-color);
       margin-left: 8px;
     }
 
@@ -63,6 +78,22 @@
       min-width: 300px;
     }
 
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background: #eee;
+    }
+
     @media (max-width: 768px) {
       body {
         padding: 1rem;
@@ -84,11 +115,28 @@
 </head>
 <body>
   <div class="container">
+    <button onclick="toggleDarkMode()" style="float:right; margin-top:-2rem; margin-bottom:1rem;">Toggle Dark Mode</button>
     <h1>🎉 Dinger Tracker Live Dashboard</h1>
     <p style="text-align:center;">Last updated: <span id="updated"></span></p>
 
     <h2>🏆 Team Leaderboard</h2>
     <div id="leaderboard"></div>
+
+    <div id="roster-view">
+      <h2>👥 Roster View</h2>
+      <p style="text-align:center;">Select a team to view their players and HR totals:</p>
+      <div style="text-align:center; margin-bottom: 1rem;">
+        <select id="rosterTeamFilter">
+          <option value="">Select Team</option>
+        </select>
+      </div>
+      <table id="rosterTable" style="display:none">
+        <thead>
+          <tr><th>Player</th><th>Home Runs</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
 
     <h2>🔹 Spray Chart (All HRs)</h2>
     <div style="text-align:center; margin-bottom: 1rem;">
@@ -112,6 +160,10 @@
   </div>
 
 <script>
+function toggleDarkMode() {
+  document.body.classList.toggle('dark');
+}
+
 async function loadDashboard() {
   const res = await fetch('data/latest.json');
   const data = await res.json();
@@ -124,7 +176,7 @@ async function loadDashboard() {
     y: data.teams.map(t => t.name),
     type: 'bar',
     orientation: 'h',
-    marker: { color: 'royalblue' }
+    marker: { color: 'IndianRed' }
   }], {
     margin: { l: 80 },
     yaxis: { autorange: 'reversed' }
@@ -180,7 +232,31 @@ async function loadDashboard() {
   });
 
   renderSpray('all');
+
+  // Roster view
+  const rosterTeams = [...new Set(data.players.map(p => p.team))].sort();
+  const rosterSelect = document.getElementById('rosterTeamFilter');
+  const rosterTable = document.getElementById('rosterTable');
+  const rosterTbody = rosterTable.querySelector('tbody');
+
+  rosterTeams.forEach(team => {
+    const opt = document.createElement('option');
+    opt.value = team;
+    opt.textContent = team;
+    rosterSelect.appendChild(opt);
+  });
+
+  rosterSelect.addEventListener('change', (e) => {
+    const team = e.target.value;
+    if (!team) return rosterTable.style.display = 'none';
+    const players = data.players.filter(p => p.team === team).sort((a, b) => b.total - a.total);
+    rosterTbody.innerHTML = players.map(p => `
+      <tr><td>${p.player}</td><td>${p.total}</td></tr>
+    `).join('');
+    rosterTable.style.display = 'table';
+  });
 }
+
 loadDashboard();
 </script>
 </body>
