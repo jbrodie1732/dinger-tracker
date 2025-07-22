@@ -1,0 +1,571 @@
+{
+  "updated": "2025-07-22T06:27:16.504Z",
+  "teams": [
+    {
+      "name": "Nick",
+      "total": 13
+    },
+    {
+      "name": "Cole",
+      "total": 9
+    },
+    {
+      "name": "Zyns",
+      "total": 8
+    },
+    {
+      "name": "Mat",
+      "total": 7
+    },
+    {
+      "name": "Nate",
+      "total": 7
+    },
+    {
+      "name": "Al",
+      "total": 6
+    },
+    {
+      "name": "Jak",
+      "total": 5
+    },
+    {
+      "name": "Steve",
+      "total": 4
+    },
+    {
+      "name": "Brodie",
+      "total": 4
+    },
+    {
+      "name": "Rob",
+      "total": 3
+    }
+  ],
+  "players": [
+    {
+      "player": "Eugenio Suárez",
+      "hrs": 5,
+      "team": "Nick"
+    },
+    {
+      "player": "Salvador Perez",
+      "hrs": 4,
+      "team": "Cole"
+    },
+    {
+      "player": "Shohei Ohtani",
+      "hrs": 3,
+      "team": "Zyns"
+    },
+    {
+      "player": "Bryce Harper",
+      "hrs": 3,
+      "team": "Nate"
+    },
+    {
+      "player": "Kyle Stowers",
+      "hrs": 3,
+      "team": "Nick"
+    },
+    {
+      "player": "Jo Adell",
+      "hrs": 2,
+      "team": "Jak"
+    },
+    {
+      "player": "Will Smith",
+      "hrs": 2,
+      "team": "Zyns"
+    },
+    {
+      "player": "Ryan McMahon",
+      "hrs": 2,
+      "team": "Zyns"
+    },
+    {
+      "player": "Kyle Schwarber",
+      "hrs": 2,
+      "team": "Cole"
+    },
+    {
+      "player": "José Ramírez",
+      "hrs": 2,
+      "team": "Cole"
+    },
+    {
+      "player": "Junior Caminero",
+      "hrs": 2,
+      "team": "Al"
+    },
+    {
+      "player": "Ozzie Albies",
+      "hrs": 2,
+      "team": "Nate"
+    },
+    {
+      "player": "Nick Kurtz",
+      "hrs": 2,
+      "team": "Nick"
+    },
+    {
+      "player": "Shea Langeliers",
+      "hrs": 2,
+      "team": "Nick"
+    },
+    {
+      "player": "Byron Buxton",
+      "hrs": 2,
+      "team": "Mat"
+    },
+    {
+      "player": "Taylor Ward",
+      "hrs": 2,
+      "team": "Mat"
+    },
+    {
+      "player": "Manny Machado",
+      "hrs": 1,
+      "team": "Rob"
+    },
+    {
+      "player": "Michael Busch",
+      "hrs": 1,
+      "team": "Rob"
+    },
+    {
+      "player": "Randy Arozarena",
+      "hrs": 1,
+      "team": "Rob"
+    },
+    {
+      "player": "Aaron Judge",
+      "hrs": 1,
+      "team": "Jak"
+    },
+    {
+      "player": "Vladimir Guerrero Jr.",
+      "hrs": 1,
+      "team": "Jak"
+    },
+    {
+      "player": "Jackson Holliday",
+      "hrs": 1,
+      "team": "Jak"
+    },
+    {
+      "player": "Ian Happ",
+      "hrs": 1,
+      "team": "Zyns"
+    },
+    {
+      "player": "Willi Castro",
+      "hrs": 1,
+      "team": "Cole"
+    },
+    {
+      "player": "Pete Crow-Armstrong",
+      "hrs": 1,
+      "team": "Al"
+    },
+    {
+      "player": "Cody Bellinger",
+      "hrs": 1,
+      "team": "Al"
+    },
+    {
+      "player": "Logan O'Hoppe",
+      "hrs": 1,
+      "team": "Al"
+    },
+    {
+      "player": "Matt McLain",
+      "hrs": 1,
+      "team": "Al"
+    },
+    {
+      "player": "Riley Greene",
+      "hrs": 1,
+      "team": "Steve"
+    },
+    {
+      "player": "Brent Rooker",
+      "hrs": 1,
+      "team": "Steve"
+    },
+    {
+      "player": "Kyle Tucker",
+      "hrs": 1,
+      "team": "Steve"
+    },
+    {
+      "player": "Addison Barger",
+      "hrs": 1,
+      "team": "Steve"
+    },
+    {
+      "player": "Ronald Acuña Jr.",
+      "hrs": 1,
+      "team": "Nate"
+    },
+    {
+      "player": "Hunter Goodman",
+      "hrs": 1,
+      "team": "Nate"
+    },
+    {
+      "player": "Juan Soto",
+      "hrs": 1,
+      "team": "Brodie"
+    },
+    {
+      "player": "Matt Olson",
+      "hrs": 1,
+      "team": "Brodie"
+    },
+    {
+      "player": "Andy Pages",
+      "hrs": 1,
+      "team": "Brodie"
+    },
+    {
+      "player": "Matt Chapman",
+      "hrs": 1,
+      "team": "Brodie"
+    },
+    {
+      "player": "George Springer",
+      "hrs": 1,
+      "team": "Nick"
+    },
+    {
+      "player": "Seiya Suzuki",
+      "hrs": 1,
+      "team": "Mat"
+    },
+    {
+      "player": "Alex Bregman",
+      "hrs": 1,
+      "team": "Mat"
+    },
+    {
+      "player": "Christian Walker",
+      "hrs": 1,
+      "team": "Mat"
+    },
+    {
+      "player": "Cal Raleigh",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Brandon Lowe",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Mike Trout",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Ceddanne Rafaela",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Lawrence Butler",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Trea Turner",
+      "hrs": 0,
+      "team": "Rob"
+    },
+    {
+      "player": "Elly De La Cruz",
+      "hrs": 0,
+      "team": "Jak"
+    },
+    {
+      "player": "Christian Yelich",
+      "hrs": 0,
+      "team": "Jak"
+    },
+    {
+      "player": "Isaac Paredes",
+      "hrs": 0,
+      "team": "Jak"
+    },
+    {
+      "player": "Yainer Diaz",
+      "hrs": 0,
+      "team": "Jak"
+    },
+    {
+      "player": "Jose Altuve",
+      "hrs": 0,
+      "team": "Jak"
+    },
+    {
+      "player": "Oneil Cruz",
+      "hrs": 0,
+      "team": "Zyns"
+    },
+    {
+      "player": "Bo Bichette",
+      "hrs": 0,
+      "team": "Zyns"
+    },
+    {
+      "player": "Teoscar Hernández",
+      "hrs": 0,
+      "team": "Zyns"
+    },
+    {
+      "player": "Vinnie Pasquantino",
+      "hrs": 0,
+      "team": "Zyns"
+    },
+    {
+      "player": "Luis García Jr.",
+      "hrs": 0,
+      "team": "Zyns"
+    },
+    {
+      "player": "Francisco Lindor",
+      "hrs": 0,
+      "team": "Cole"
+    },
+    {
+      "player": "Tyler Soderstrom",
+      "hrs": 0,
+      "team": "Cole"
+    },
+    {
+      "player": "Julio Rodríguez",
+      "hrs": 0,
+      "team": "Cole"
+    },
+    {
+      "player": "Adolis García",
+      "hrs": 0,
+      "team": "Cole"
+    },
+    {
+      "player": "Freddie Freeman",
+      "hrs": 0,
+      "team": "Cole"
+    },
+    {
+      "player": "Fernando Tatis Jr.",
+      "hrs": 0,
+      "team": "Al"
+    },
+    {
+      "player": "Spencer Torkelson",
+      "hrs": 0,
+      "team": "Al"
+    },
+    {
+      "player": "Zach Neto",
+      "hrs": 0,
+      "team": "Al"
+    },
+    {
+      "player": "Marcell Ozuna",
+      "hrs": 0,
+      "team": "Al"
+    },
+    {
+      "player": "Pete Alonso",
+      "hrs": 0,
+      "team": "Steve"
+    },
+    {
+      "player": "Jazz Chisholm Jr.",
+      "hrs": 0,
+      "team": "Steve"
+    },
+    {
+      "player": "Gunnar Henderson",
+      "hrs": 0,
+      "team": "Steve"
+    },
+    {
+      "player": "Jackson Merrill",
+      "hrs": 0,
+      "team": "Steve"
+    },
+    {
+      "player": "Drake Baldwin",
+      "hrs": 0,
+      "team": "Steve"
+    },
+    {
+      "player": "James Wood",
+      "hrs": 0,
+      "team": "Nate"
+    },
+    {
+      "player": "Bobby Witt Jr.",
+      "hrs": 0,
+      "team": "Nate"
+    },
+    {
+      "player": "Rafael Devers",
+      "hrs": 0,
+      "team": "Nate"
+    },
+    {
+      "player": "Mark Vientos",
+      "hrs": 0,
+      "team": "Nate"
+    },
+    {
+      "player": "Javier Báez",
+      "hrs": 0,
+      "team": "Nate"
+    },
+    {
+      "player": "Ketel Marte",
+      "hrs": 0,
+      "team": "Brodie"
+    },
+    {
+      "player": "Corey Seager",
+      "hrs": 0,
+      "team": "Brodie"
+    },
+    {
+      "player": "Wyatt Langford",
+      "hrs": 0,
+      "team": "Brodie"
+    },
+    {
+      "player": "Austin Wells",
+      "hrs": 0,
+      "team": "Brodie"
+    },
+    {
+      "player": "Ben Rice",
+      "hrs": 0,
+      "team": "Brodie"
+    },
+    {
+      "player": "Corbin Carroll",
+      "hrs": 0,
+      "team": "Nick"
+    },
+    {
+      "player": "Jackson Chourio",
+      "hrs": 0,
+      "team": "Nick"
+    },
+    {
+      "player": "Trevor Story",
+      "hrs": 0,
+      "team": "Nick"
+    },
+    {
+      "player": "Brice Turang",
+      "hrs": 0,
+      "team": "Nick"
+    },
+    {
+      "player": "Sean Murphy",
+      "hrs": 0,
+      "team": "Mat"
+    },
+    {
+      "player": "Marcus Semien",
+      "hrs": 0,
+      "team": "Mat"
+    },
+    {
+      "player": "Mookie Betts",
+      "hrs": 0,
+      "team": "Mat"
+    },
+    {
+      "player": "Nick Castellanos",
+      "hrs": 0,
+      "team": "Mat"
+    }
+  ],
+  "heavyLifters": [
+    {
+      "player": "Manny Machado",
+      "hrs": 1,
+      "team": "Rob",
+      "pctOfTeam": 33
+    },
+    {
+      "player": "Michael Busch",
+      "hrs": 1,
+      "team": "Rob",
+      "pctOfTeam": 33
+    },
+    {
+      "player": "Randy Arozarena",
+      "hrs": 1,
+      "team": "Rob",
+      "pctOfTeam": 33
+    },
+    {
+      "player": "Jo Adell",
+      "hrs": 2,
+      "team": "Jak",
+      "pctOfTeam": 40
+    },
+    {
+      "player": "Shohei Ohtani",
+      "hrs": 3,
+      "team": "Zyns",
+      "pctOfTeam": 38
+    },
+    {
+      "player": "Salvador Perez",
+      "hrs": 4,
+      "team": "Cole",
+      "pctOfTeam": 44
+    },
+    {
+      "player": "Junior Caminero",
+      "hrs": 2,
+      "team": "Al",
+      "pctOfTeam": 33
+    },
+    {
+      "player": "Bryce Harper",
+      "hrs": 3,
+      "team": "Nate",
+      "pctOfTeam": 43
+    },
+    {
+      "player": "Eugenio Suárez",
+      "hrs": 5,
+      "team": "Nick",
+      "pctOfTeam": 38
+    }
+  ],
+  "spray": [
+    {
+      "player": "Kyle Stowers",
+      "team": "Nick",
+      "distance": 400,
+      "timestamp": "2025-07-21T23:51:46.767Z",
+      "launchAngle": 31,
+      "launchSpeed": 103.2,
+      "x": 79.65,
+      "y": 43.95
+    }
+  ],
+  "longestHr": {
+    "player": "Kyle Stowers",
+    "distance": 400,
+    "team": "Nick",
+    "date": "2025-07-21"
+  }
+}

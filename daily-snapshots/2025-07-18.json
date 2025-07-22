@@ -1,0 +1,213 @@
+{
+  "playerTotals": {
+    "Cal Raleigh": 0,
+    "Brandon Lowe": 0,
+    "Manny Machado": 1,
+    "Mike Trout": 0,
+    "Michael Busch": 0,
+    "Randy Arozarena": 1,
+    "Ceddanne Rafaela": 0,
+    "Lawrence Butler": 0,
+    "Trea Turner": 0,
+    "Aaron Judge": 0,
+    "Elly De La Cruz": 0,
+    "Christian Yelich": 0,
+    "Isaac Paredes": 0,
+    "Vladimir Guerrero Jr.": 0,
+    "Jo Adell": {
+      "homeRuns": 1,
+      "distances": [
+        411
+      ]
+    },
+    "Jackson Holliday": 0,
+    "Yainer Diaz": 0,
+    "Jose Altuve": 0,
+    "Shohei Ohtani": 0,
+    "Oneil Cruz": 0,
+    "Will Smith": 0,
+    "Ryan McMahon": 1,
+    "Bo Bichette": 0,
+    "Teoscar Hernández": 0,
+    "Vinnie Pasquantino": 0,
+    "Ian Happ": 0,
+    "Luis García Jr.": 0,
+    "Kyle Schwarber": {
+      "homeRuns": 1,
+      "distances": [
+        366
+      ]
+    },
+    "José Ramírez": 0,
+    "Francisco Lindor": 0,
+    "Tyler Soderstrom": 0,
+    "Julio Rodríguez": 0,
+    "Adolis García": 0,
+    "Salvador Perez": 0,
+    "Freddie Freeman": 0,
+    "Willi Castro": 1,
+    "Pete Crow-Armstrong": 0,
+    "Junior Caminero": {
+      "homeRuns": 2,
+      "distances": [
+        439
+      ]
+    },
+    "Fernando Tatis Jr.": 0,
+    "Cody Bellinger": 0,
+    "Spencer Torkelson": 0,
+    "Zach Neto": 0,
+    "Marcell Ozuna": 0,
+    "Logan O'Hoppe": 0,
+    "Matt McLain": 1,
+    "Pete Alonso": 0,
+    "Riley Greene": 0,
+    "Brent Rooker": 1,
+    "Jazz Chisholm Jr.": 0,
+    "Kyle Tucker": 0,
+    "Gunnar Henderson": 0,
+    "Jackson Merrill": 0,
+    "Addison Barger": 0,
+    "Drake Baldwin": 0,
+    "James Wood": 0,
+    "Ronald Acuña Jr.": 0,
+    "Bobby Witt Jr.": 0,
+    "Bryce Harper": {
+      "homeRuns": 2,
+      "distances": [
+        375
+      ]
+    },
+    "Hunter Goodman": 0,
+    "Rafael Devers": 0,
+    "Ozzie Albies": 1,
+    "Mark Vientos": 0,
+    "Javier Báez": 0,
+    "Juan Soto": {
+      "homeRuns": 1,
+      "distances": [
+        412
+      ]
+    },
+    "Ketel Marte": 0,
+    "Corey Seager": 0,
+    "Matt Olson": 0,
+    "Wyatt Langford": 0,
+    "Andy Pages": 0,
+    "Austin Wells": 0,
+    "Ben Rice": 0,
+    "Matt Chapman": 0,
+    "Eugenio Suárez": 0,
+    "Nick Kurtz": 0,
+    "Kyle Stowers": {
+      "homeRuns": 2,
+      "distances": [
+        406
+      ]
+    },
+    "Corbin Carroll": 0,
+    "Shea Langeliers": 1,
+    "Jackson Chourio": 0,
+    "George Springer": 0,
+    "Trevor Story": 0,
+    "Brice Turang": 0,
+    "Seiya Suzuki": {
+      "homeRuns": 1,
+      "distances": [
+        389
+      ]
+    },
+    "Byron Buxton": 1,
+    "Sean Murphy": 0,
+    "Taylor Ward": 1,
+    "Alex Bregman": 0,
+    "Marcus Semien": 0,
+    "Mookie Betts": 0,
+    "Nick Castellanos": 0,
+    "Christian Walker": 0
+  },
+  "teamTotals": {
+    "Rob": 2,
+    "Jak": 1,
+    "Zyns": 1,
+    "Cole": 2,
+    "Al": 3,
+    "Steve": 1,
+    "Nate": 3,
+    "Brodie": 1,
+    "Nick": 3,
+    "Mat": 3
+  },
+  "homeRuns": [
+    {
+      "player": "Seiya Suzuki",
+      "team": "Mat",
+      "distance": 389,
+      "timestamp": "2025-07-18T18:33:21.840Z",
+      "launchAngle": 26,
+      "launchSpeed": 105.7,
+      "x": 101.51,
+      "y": 44.04
+    },
+    {
+      "player": "Kyle Schwarber",
+      "team": "Cole",
+      "distance": 366,
+      "timestamp": "2025-07-18T22:55:45.884Z",
+      "launchAngle": 24,
+      "launchSpeed": 102.4,
+      "x": 195.76,
+      "y": 68.5
+    },
+    {
+      "player": "Bryce Harper",
+      "team": "Nate",
+      "distance": 375,
+      "timestamp": "2025-07-18T23:34:38.729Z",
+      "launchAngle": 22,
+      "launchSpeed": 105.7,
+      "x": 211.64,
+      "y": 81.54
+    },
+    {
+      "player": "Jo Adell",
+      "team": "Jak",
+      "distance": 411,
+      "timestamp": "2025-07-18T23:47:34.140Z",
+      "launchAngle": 20,
+      "launchSpeed": 109.9,
+      "x": 149.16,
+      "y": 34.59
+    },
+    {
+      "player": "Juan Soto",
+      "team": "Brodie",
+      "distance": 412,
+      "timestamp": "2025-07-18T23:20:15.824Z",
+      "launchAngle": 21,
+      "launchSpeed": 115,
+      "x": 196.42,
+      "y": 47.26
+    },
+    {
+      "player": "Kyle Stowers",
+      "team": "Nick",
+      "distance": 406,
+      "timestamp": "2025-07-18T23:26:51.342Z",
+      "launchAngle": 28,
+      "launchSpeed": 103.9,
+      "x": 181.02,
+      "y": 43.87
+    },
+    {
+      "player": "Junior Caminero",
+      "team": "Al",
+      "distance": 439,
+      "timestamp": "2025-07-18T23:49:42.228Z",
+      "launchAngle": 20,
+      "launchSpeed": 114.6,
+      "x": 70.32,
+      "y": 29.99
+    }
+  ]
+}

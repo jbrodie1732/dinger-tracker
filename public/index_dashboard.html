@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dinger Tracker Dashboard</title>
+  <script src="https://cdn.plot.ly/plotly-2.24.0.min.js"></script>
+  <style>
+    body { font-family: sans-serif; margin: 2rem; }
+    h2 { margin-top: 3rem; }
+    #leaderboard, #spray { max-width: 700px; margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>Dinger Tracker Live Dashboard</h1>
+  <p>Last updated: <span id="updated"></span></p>
+
+  <h2>🏆 Team Leaderboard</h2>
+  <div id="leaderboard"></div>
+
+  <h2>📍 Spray Chart (All HRs)</h2>
+  <div id="spray"></div>
+
+  <h2>🔥 Heavy Lifters (33%+ of Team HRs)</h2>
+  <ul id="heavy"></ul>
+
+  <h2>📏 Longest HR of Season</h2>
+  <p id="longest">Loading...</p>
+
+<script>
+async function loadDashboard() {
+  const res = await fetch('data/latest.json');
+  const data = await res.json();
+
+  // Last updated timestamp
+  document.getElementById('updated').textContent = new Date(data.updated).toLocaleString();
+
+  // Leaderboard chart
+  Plotly.newPlot('leaderboard', [{
+    x: data.teams.map(t => t.total),
+    y: data.teams.map(t => t.name),
+    type: 'bar',
+    orientation: 'h',
+    marker: { color: 'royalblue' }
+  }], {
+    margin: { l: 80 },
+    yaxis: { autorange: 'reversed' }
+  });
+
+  // Spray chart
+  Plotly.newPlot('spray', [{
+    x: data.spray.map(p => p.x),
+    y: data.spray.map(p => p.y),
+    mode: 'markers',
+    type: 'scatter',
+    text: data.spray.map(p => `${p.player} (${p.team})`),
+    marker: {
+      size: 10,
+      color: data.spray.map(p => p.team),
+      opacity: 0.7,
+      line: { width: 1, color: 'black' }
+    }
+  }], {
+    xaxis: { range: [0, 250], title: 'Spray X' },
+    yaxis: { range: [250, 0], title: 'Spray Y' },
+    shapes: [{
+      type: 'path',
+      path: 'M125 0 L200 75 L125 150 L50 75 Z',
+      line: { color: 'gray', width: 2, dash: 'dash' }
+    }],
+    height: 600
+  });
+
+  // Heavy lifters
+  const heavy = data.heavyLifters.map(p =>
+    `<li><strong>${p.player}</strong> (${p.team}) – ${p.hrs} HRs (${p.pctOfTeam}% of team)</li>`
+  ).join('');
+  document.getElementById('heavy').innerHTML = heavy || '<li>None</li>';
+
+  // Longest HR
+  const long = data.longestHr;
+  document.getElementById('longest').textContent = long
+    ? `${long.player} (${long.team}) – ${long.distance} ft on ${long.date}`
+    : 'No data';
+}
+
+loadDashboard();
+</script>
+</body>
+</html>
