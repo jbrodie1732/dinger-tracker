@@ -180,21 +180,22 @@ function computeRanks(teams) {
   const sorted = [...teams].sort((a, b) => b.total - a.total);
   let ranks = [];
   let lastScore = null;
-  let rank = 1;
+  let lastRank = 0;
   for (let i = 0; i < sorted.length; i++) {
     const team = sorted[i];
     if (team.total === lastScore) {
-      // If tied, assign same rank with "T-"
-      ranks[i] = { ...team, rank: `T-${rank}` };
-      // Also back-fill the previous team's rank if not already marked as tied
-      if (!ranks[i - 1].rank.startsWith('T-')) {
-        ranks[i - 1].rank = `T-${rank}`;
+      // Same rank as previous (tied), use lastRank for all tied teams
+      ranks[i] = { ...team, rank: `T-${lastRank}` };
+      // Also update the previous team (if not already marked as tied)
+      if (ranks[i - 1] && !ranks[i - 1].rank.startsWith('T-')) {
+        ranks[i - 1].rank = `T-${lastRank}`;
       }
     } else {
-      ranks[i] = { ...team, rank: `${rank}` };
+      // New rank
+      lastRank = i + 1;
+      ranks[i] = { ...team, rank: `${lastRank}` };
       lastScore = team.total;
     }
-    rank = i + 1 + 1; // next rank (1-based)
   }
   return ranks;
 }
