@@ -291,8 +291,12 @@ async function loadDashboard() {
       .filter(p => p.team === team)
       .sort((a, b) => b.total - a.total);
     rosterTbody.innerHTML = players.map(p => `
-      <tr><td>${p.name || p.player}</td><td>${p.total}</td></tr>
+      <tr>
+        <td>${p.name || p.player}</td>
+        <td>${typeof p.total === 'object' ? p.total.total : p.total}</td>
+      </tr>
     `).join('');
+
     rosterTable.style.display = 'table';
   });
 }
