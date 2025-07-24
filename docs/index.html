@@ -6,9 +6,117 @@
   <title>Dinger Tracker Dashboard</title>
   <script src="https://cdn.plot.ly/plotly-2.24.0.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <!-- ...styles unchanged... -->
   <style>
-    /* (Styles unchanged for brevity, copy all your previous CSS here) */
+    :root {
+      --bg-color: #f9fafb;
+      --fg-color: #111;
+      --card-bg: #fff;
+      --border-color: #ccc;
+      --th-bg: #eee;
+    }
+
+    body.dark {
+      --bg-color: #1a1a1a;
+      --fg-color: #f0f0f0;
+      --card-bg: #2a2a2a;
+      --border-color: #444;
+      --th-bg: #333;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: var(--bg-color);
+      color: var(--fg-color);
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 2rem;
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: var(--fg-color);
+      margin-top: 0;
+    }
+
+    label, select {
+      font-size: 1rem;
+    }
+
+    select {
+      padding: 6px 10px;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid var(--border-color);
+      margin-left: 8px;
+    }
+
+    #leaderboard, #spray {
+      margin: 2rem auto;
+    }
+
+    ul {
+      line-height: 1.6;
+      padding-left: 1.2rem;
+    }
+
+    .flex-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .flex-col {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid var(--border-color);
+      padding: 0.5rem;
+      text-align: left;
+    }
+
+    th {
+      background: var(--th-bg);
+    }
+
+    #roster-view {
+      margin-bottom: 3rem;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .container {
+        padding: 1rem;
+      }
+
+      .flex-row {
+        flex-direction: column;
+      }
+
+      .flex-col {
+        min-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -68,28 +176,22 @@ function toggleDarkMode() {
   document.body.classList.toggle('dark');
 }
 
-// ---- FIX #1: Leaderboard Ties, all tied teams as "T-{rank}" ----
 function computeRanks(teams) {
   const sorted = [...teams].sort((a, b) => b.total - a.total);
-  let ranks = [];
   let lastScore = null;
-  let rank = 1;
-  for (let i = 0; i < sorted.length; i++) {
-    const team = sorted[i];
+  let lastRank = 0;
+  let ties = 0;
+  return sorted.map((team, i) => {
     if (team.total === lastScore) {
-      // If tied, assign same rank with "T-"
-      ranks[i] = { ...team, rank: `T-${rank}` };
-      // Also back-fill the previous team's rank if not already marked as tied
-      if (!ranks[i - 1].rank.startsWith('T-')) {
-        ranks[i - 1].rank = `T-${rank}`;
-      }
+      ties++;
+      return { ...team, rank: `T-${lastRank}` };
     } else {
-      ranks[i] = { ...team, rank: `${rank}` };
+      lastRank = i + 1;
+      ties = 1;
       lastScore = team.total;
+      return { ...team, rank: `${lastRank}` };
     }
-    rank = i + 1 + 1; // next rank (1-based)
-  }
-  return ranks;
+  });
 }
 
 async function loadDashboard() {
@@ -169,7 +271,7 @@ async function loadDashboard() {
 
   renderSpray('all');
 
-  // ---- FIX #2: Roster View HR Sorting ----
+  // Roster view
   const rosterTeams = [...new Set(data.players.map(p => p.team))].sort();
   const rosterSelect = document.getElementById('rosterTeamFilter');
   const rosterTable = document.getElementById('rosterTable');
@@ -185,14 +287,9 @@ async function loadDashboard() {
   rosterSelect.addEventListener('change', (e) => {
     const team = e.target.value;
     if (!team) return rosterTable.style.display = 'none';
-    // Correct sort: by total.total if object, else by total
     const players = data.players
       .filter(p => p.team === team)
-      .sort((a, b) => {
-        const aHR = typeof a.total === 'object' ? a.total.total : a.total;
-        const bHR = typeof b.total === 'object' ? b.total.total : b.total;
-        return bHR - aHR;
-      });
+      .sort((a, b) => b.total - a.total);
     rosterTbody.innerHTML = players.map(p => `
       <tr>
         <td>${p.name || p.player}</td>
