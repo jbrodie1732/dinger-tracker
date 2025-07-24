@@ -1,286 +1,263 @@
 {
-  "updated": "2025-07-23T16:30:02.916Z",
+  "updated": "2025-07-24T03:13:59.336Z",
   "teams": [
+    {
+      "name": "Cole",
+      "total": 14
+    },
+    {
+      "name": "Zyns",
+      "total": 14
+    },
     {
       "name": "Nick",
       "total": 13
     },
     {
-      "name": "Cole",
-      "total": 12
+      "name": "Nate",
+      "total": 10
     },
     {
-      "name": "Zyns",
+      "name": "Brodie",
       "total": 10
     },
     {
       "name": "Mat",
-      "total": 8
+      "total": 9
     },
     {
       "name": "Al",
-      "total": 7
-    },
-    {
-      "name": "Nate",
-      "total": 7
-    },
-    {
-      "name": "Brodie",
-      "total": 7
+      "total": 9
     },
     {
       "name": "Jak",
-      "total": 5
+      "total": 7
     },
     {
       "name": "Rob",
-      "total": 5
+      "total": 6
     },
     {
       "name": "Steve",
-      "total": 5
+      "total": 6
     }
   ],
   "players": [
     {
-      "name": "Cal Raleigh",
-      "total": {
-        "total": 1,
-        "distances": [
-          391
-        ]
-      },
-      "team": "Rob"
+      "name": "Shohei Ohtani",
+      "total": 5,
+      "team": "Zyns"
     },
     {
-      "name": "Brandon Lowe",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "name": "Ryan McMahon",
+      "total": 3,
+      "team": "Zyns"
+    },
+    {
+      "name": "José Ramírez",
+      "total": 3,
+      "team": "Cole"
+    },
+    {
+      "name": "Jo Adell",
+      "total": 2,
+      "team": "Jak"
+    },
+    {
+      "name": "Jackson Holliday",
+      "total": 2,
+      "team": "Jak"
+    },
+    {
+      "name": "Will Smith",
+      "total": 2,
+      "team": "Zyns"
+    },
+    {
+      "name": "Cal Raleigh",
+      "total": 1,
       "team": "Rob"
     },
     {
       "name": "Manny Machado",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 1,
+      "team": "Rob"
+    },
+    {
+      "name": "Michael Busch",
+      "total": 1,
+      "team": "Rob"
+    },
+    {
+      "name": "Lawrence Butler",
+      "total": 1,
+      "team": "Rob"
+    },
+    {
+      "name": "Logan O'Hoppe",
+      "total": 1,
+      "team": "Al"
+    },
+    {
+      "name": "Matt McLain",
+      "total": 1,
+      "team": "Al"
+    },
+    {
+      "name": "Brandon Lowe",
+      "total": 0,
       "team": "Rob"
     },
     {
       "name": "Mike Trout",
       "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Rob"
-    },
-    {
-      "name": "Michael Busch",
-      "total": {
         "total": 1,
-        "distances": []
+        "distances": [
+          380
+        ]
       },
       "team": "Rob"
     },
     {
       "name": "Randy Arozarena",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 1,
       "team": "Rob"
+    },
+    {
+      "name": "Vladimir Guerrero Jr.",
+      "total": 1,
+      "team": "Jak"
+    },
+    {
+      "name": "Ian Happ",
+      "total": 1,
+      "team": "Zyns"
+    },
+    {
+      "name": "Adolis García",
+      "total": 1,
+      "team": "Cole"
+    },
+    {
+      "name": "Willi Castro",
+      "total": 1,
+      "team": "Cole"
     },
     {
       "name": "Ceddanne Rafaela",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Rob"
-    },
-    {
-      "name": "Lawrence Butler",
-      "total": {
-        "total": 1,
-        "distances": [
-          368
-        ]
-      },
+      "total": 0,
       "team": "Rob"
     },
     {
       "name": "Trea Turner",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Rob"
     },
     {
       "name": "Aaron Judge",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          398
+        ]
       },
       "team": "Jak"
     },
     {
+      "name": "Cody Bellinger",
+      "total": 2,
+      "team": "Al"
+    },
+    {
       "name": "Elly De La Cruz",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Jak"
     },
     {
       "name": "Christian Yelich",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Jak"
     },
     {
       "name": "Isaac Paredes",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Jak"
-    },
-    {
-      "name": "Vladimir Guerrero Jr.",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Jak"
-    },
-    {
-      "name": "Jo Adell",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Jak"
-    },
-    {
-      "name": "Jackson Holliday",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 0,
       "team": "Jak"
     },
     {
       "name": "Yainer Diaz",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Jak"
     },
     {
       "name": "Jose Altuve",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Jak"
     },
     {
-      "name": "Shohei Ohtani",
-      "total": {
-        "total": 4,
-        "distances": [
-          405
-        ]
-      },
-      "team": "Zyns"
-    },
-    {
       "name": "Oneil Cruz",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Zyns"
-    },
-    {
-      "name": "Will Smith",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Zyns"
-    },
-    {
-      "name": "Ryan McMahon",
-      "total": {
-        "total": 3,
-        "distances": [
-          410
-        ]
-      },
+      "total": 0,
       "team": "Zyns"
     },
     {
       "name": "Bo Bichette",
       "total": {
-        "total": 0,
-        "distances": []
+        "total": 1,
+        "distances": [
+          360
+        ]
       },
       "team": "Zyns"
     },
     {
       "name": "Teoscar Hernández",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Zyns"
     },
     {
       "name": "Vinnie Pasquantino",
       "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Zyns"
-    },
-    {
-      "name": "Ian Happ",
-      "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          406,
+          414
+        ]
       },
       "team": "Zyns"
     },
     {
       "name": "Luis García Jr.",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Zyns"
     },
     {
       "name": "Kyle Schwarber",
       "total": {
-        "total": 3,
+        "total": 4,
         "distances": [
-          410
+          409
         ]
       },
       "team": "Cole"
     },
     {
-      "name": "José Ramírez",
+      "name": "Francisco Lindor",
+      "total": 0,
+      "team": "Cole"
+    },
+    {
+      "name": "Tyler Soderstrom",
+      "total": 0,
+      "team": "Cole"
+    },
+    {
+      "name": "Julio Rodríguez",
+      "total": 0,
+      "team": "Cole"
+    },
+    {
+      "name": "Salvador Perez",
       "total": {
-        "total": 3,
+        "total": 5,
         "distances": [
           384
         ]
@@ -288,509 +265,321 @@
       "team": "Cole"
     },
     {
-      "name": "Francisco Lindor",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Cole"
-    },
-    {
-      "name": "Tyler Soderstrom",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Cole"
-    },
-    {
-      "name": "Julio Rodríguez",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Cole"
-    },
-    {
-      "name": "Adolis García",
-      "total": {
-        "total": 1,
-        "distances": [
-          426
-        ]
-      },
-      "team": "Cole"
-    },
-    {
-      "name": "Salvador Perez",
-      "total": {
-        "total": 4,
-        "distances": []
-      },
-      "team": "Cole"
-    },
-    {
       "name": "Freddie Freeman",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Cole"
-    },
-    {
-      "name": "Willi Castro",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 0,
       "team": "Cole"
     },
     {
       "name": "Pete Crow-Armstrong",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          383
+        ]
       },
       "team": "Al"
     },
     {
       "name": "Junior Caminero",
       "total": {
-        "total": 2,
-        "distances": []
+        "total": 3,
+        "distances": [
+          363
+        ]
       },
       "team": "Al"
     },
     {
       "name": "Fernando Tatis Jr.",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Al"
-    },
-    {
-      "name": "Cody Bellinger",
-      "total": {
-        "total": 2,
-        "distances": [
-          405
-        ]
-      },
+      "total": 0,
       "team": "Al"
     },
     {
       "name": "Spencer Torkelson",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Al"
     },
     {
       "name": "Zach Neto",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Al"
     },
     {
       "name": "Marcell Ozuna",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Al"
-    },
-    {
-      "name": "Logan O'Hoppe",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Al"
-    },
-    {
-      "name": "Matt McLain",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 0,
       "team": "Al"
     },
     {
       "name": "Pete Alonso",
       "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Steve"
-    },
-    {
-      "name": "Riley Greene",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Steve"
-    },
-    {
-      "name": "Brent Rooker",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Steve"
-    },
-    {
-      "name": "Jazz Chisholm Jr.",
-      "total": {
         "total": 1,
         "distances": [
-          407
+          439
         ]
       },
       "team": "Steve"
     },
     {
+      "name": "Eugenio Suárez",
+      "total": 5,
+      "team": "Nick"
+    },
+    {
+      "name": "Kyle Stowers",
+      "total": 3,
+      "team": "Nick"
+    },
+    {
+      "name": "Ozzie Albies",
+      "total": 2,
+      "team": "Nate"
+    },
+    {
+      "name": "Andy Pages",
+      "total": 2,
+      "team": "Brodie"
+    },
+    {
+      "name": "Nick Kurtz",
+      "total": 2,
+      "team": "Nick"
+    },
+    {
+      "name": "Shea Langeliers",
+      "total": 2,
+      "team": "Nick"
+    },
+    {
+      "name": "Byron Buxton",
+      "total": 2,
+      "team": "Mat"
+    },
+    {
+      "name": "Taylor Ward",
+      "total": 2,
+      "team": "Mat"
+    },
+    {
+      "name": "Riley Greene",
+      "total": 1,
+      "team": "Steve"
+    },
+    {
+      "name": "Brent Rooker",
+      "total": 1,
+      "team": "Steve"
+    },
+    {
+      "name": "Jazz Chisholm Jr.",
+      "total": 1,
+      "team": "Steve"
+    },
+    {
       "name": "Kyle Tucker",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Steve"
-    },
-    {
-      "name": "Gunnar Henderson",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Steve"
-    },
-    {
-      "name": "Jackson Merrill",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 1,
       "team": "Steve"
     },
     {
       "name": "Addison Barger",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 1,
+      "team": "Steve"
+    },
+    {
+      "name": "Ronald Acuña Jr.",
+      "total": 1,
+      "team": "Nate"
+    },
+    {
+      "name": "Hunter Goodman",
+      "total": 1,
+      "team": "Nate"
+    },
+    {
+      "name": "Juan Soto",
+      "total": 1,
+      "team": "Brodie"
+    },
+    {
+      "name": "Ketel Marte",
+      "total": 1,
+      "team": "Brodie"
+    },
+    {
+      "name": "Ben Rice",
+      "total": 1,
+      "team": "Brodie"
+    },
+    {
+      "name": "George Springer",
+      "total": 1,
+      "team": "Nick"
+    },
+    {
+      "name": "Seiya Suzuki",
+      "total": 1,
+      "team": "Mat"
+    },
+    {
+      "name": "Alex Bregman",
+      "total": 1,
+      "team": "Mat"
+    },
+    {
+      "name": "Marcus Semien",
+      "total": 1,
+      "team": "Mat"
+    },
+    {
+      "name": "Gunnar Henderson",
+      "total": 0,
+      "team": "Steve"
+    },
+    {
+      "name": "Jackson Merrill",
+      "total": 0,
       "team": "Steve"
     },
     {
       "name": "Drake Baldwin",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Steve"
     },
     {
       "name": "James Wood",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Nate"
-    },
-    {
-      "name": "Ronald Acuña Jr.",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nate"
     },
     {
       "name": "Bobby Witt Jr.",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nate"
     },
     {
       "name": "Bryce Harper",
       "total": {
-        "total": 3,
-        "distances": []
-      },
-      "team": "Nate"
-    },
-    {
-      "name": "Hunter Goodman",
-      "total": {
-        "total": 1,
-        "distances": []
+        "total": 4,
+        "distances": [
+          439
+        ]
       },
       "team": "Nate"
     },
     {
       "name": "Rafael Devers",
       "total": {
-        "total": 0,
-        "distances": []
+        "total": 2,
+        "distances": [
+          357,
+          410
+        ]
       },
       "team": "Nate"
     },
     {
-      "name": "Ozzie Albies",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Nate"
+      "name": "Matt Olson",
+      "total": 1,
+      "team": "Brodie"
     },
     {
       "name": "Mark Vientos",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nate"
     },
     {
       "name": "Javier Báez",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nate"
-    },
-    {
-      "name": "Juan Soto",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Brodie"
-    },
-    {
-      "name": "Ketel Marte",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Brodie"
     },
     {
       "name": "Corey Seager",
       "total": {
-        "total": 1,
+        "total": 2,
         "distances": [
-          399
+          434
         ]
-      },
-      "team": "Brodie"
-    },
-    {
-      "name": "Matt Olson",
-      "total": {
-        "total": 1,
-        "distances": []
       },
       "team": "Brodie"
     },
     {
       "name": "Wyatt Langford",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Brodie"
-    },
-    {
-      "name": "Andy Pages",
-      "total": {
-        "total": 2,
-        "distances": [
-          387
-        ]
-      },
+      "total": 0,
       "team": "Brodie"
     },
     {
       "name": "Austin Wells",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Brodie"
-    },
-    {
-      "name": "Ben Rice",
-      "total": {
-        "total": 1,
-        "distances": [
-          389
-        ]
-      },
+      "total": 0,
       "team": "Brodie"
     },
     {
       "name": "Matt Chapman",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          391
+        ]
       },
       "team": "Brodie"
     },
     {
-      "name": "Eugenio Suárez",
-      "total": {
-        "total": 5,
-        "distances": []
-      },
-      "team": "Nick"
-    },
-    {
-      "name": "Nick Kurtz",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Nick"
-    },
-    {
-      "name": "Kyle Stowers",
-      "total": {
-        "total": 3,
-        "distances": []
-      },
-      "team": "Nick"
+      "name": "Christian Walker",
+      "total": 1,
+      "team": "Mat"
     },
     {
       "name": "Corbin Carroll",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Nick"
-    },
-    {
-      "name": "Shea Langeliers",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nick"
     },
     {
       "name": "Jackson Chourio",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Nick"
-    },
-    {
-      "name": "George Springer",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nick"
     },
     {
       "name": "Trevor Story",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nick"
     },
     {
       "name": "Brice Turang",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Nick"
     },
     {
-      "name": "Seiya Suzuki",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
-      "name": "Byron Buxton",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
       "name": "Sean Murphy",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
-      "name": "Taylor Ward",
-      "total": {
-        "total": 2,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
-      "name": "Alex Bregman",
-      "total": {
-        "total": 1,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
-      "name": "Marcus Semien",
-      "total": {
-        "total": 1,
-        "distances": [
-          365
-        ]
-      },
+      "total": 0,
       "team": "Mat"
     },
     {
       "name": "Mookie Betts",
-      "total": {
-        "total": 0,
-        "distances": []
-      },
+      "total": 0,
       "team": "Mat"
     },
     {
       "name": "Nick Castellanos",
       "total": {
-        "total": 0,
-        "distances": []
-      },
-      "team": "Mat"
-    },
-    {
-      "name": "Christian Walker",
-      "total": {
         "total": 1,
-        "distances": []
+        "distances": [
+          380
+        ]
       },
       "team": "Mat"
     }
   ],
-  "heavyLifters": [],
+  "heavyLifters": [
+    {
+      "player": "Shohei Ohtani",
+      "team": "Zyns",
+      "hrs": 5,
+      "pctOfTeam": 35.7
+    },
+    {
+      "player": "Eugenio Suárez",
+      "team": "Nick",
+      "hrs": 5,
+      "pctOfTeam": 38.5
+    }
+  ],
   "spray": [
     {
       "player": "Seiya Suzuki",
