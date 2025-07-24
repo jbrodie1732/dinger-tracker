@@ -178,20 +178,25 @@ function toggleDarkMode() {
 
 function computeRanks(teams) {
   const sorted = [...teams].sort((a, b) => b.total - a.total);
+  let ranks = [];
   let lastScore = null;
-  let lastRank = 0;
-  let ties = 0;
-  return sorted.map((team, i) => {
+  let rank = 1;
+  for (let i = 0; i < sorted.length; i++) {
+    const team = sorted[i];
     if (team.total === lastScore) {
-      ties++;
-      return { ...team, rank: `T-${lastRank}` };
+      // If tied, assign same rank with "T-"
+      ranks[i] = { ...team, rank: `T-${rank}` };
+      // Also back-fill the previous team's rank if not already marked as tied
+      if (!ranks[i - 1].rank.startsWith('T-')) {
+        ranks[i - 1].rank = `T-${rank}`;
+      }
     } else {
-      lastRank = i + 1;
-      ties = 1;
+      ranks[i] = { ...team, rank: `${rank}` };
       lastScore = team.total;
-      return { ...team, rank: `${lastRank}` };
     }
-  });
+    rank = i + 1 + 1; // next rank (1-based)
+  }
+  return ranks;
 }
 
 async function loadDashboard() {
@@ -287,9 +292,14 @@ async function loadDashboard() {
   rosterSelect.addEventListener('change', (e) => {
     const team = e.target.value;
     if (!team) return rosterTable.style.display = 'none';
+    // Correct sort: by total.total if object, else by total
     const players = data.players
       .filter(p => p.team === team)
-      .sort((a, b) => b.total - a.total);
+      .sort((a, b) => {
+        const aHR = typeof a.total === 'object' ? a.total.total : a.total;
+        const bHR = typeof b.total === 'object' ? b.total.total : b.total;
+        return bHR - aHR;
+      });
     rosterTbody.innerHTML = players.map(p => `
       <tr>
         <td>${p.name || p.player}</td>
