@@ -1,5 +1,5 @@
 {
-  "updated": "2025-07-25T04:49:46.898Z",
+  "updated": "2025-07-25T05:47:58.497Z",
   "teams": [
     {
       "name": "Cole",
@@ -1007,6 +1007,262 @@
       "y": 43.95,
       "distance": 400,
       "date": "2025-07-21"
+    },
+    {
+      "player": "José Ramírez",
+      "team": "Cole",
+      "x": 218.73,
+      "y": 73.76,
+      "distance": 384,
+      "date": "2025-07-22"
+    },
+    {
+      "player": "Jazz Chisholm Jr.",
+      "team": "Steve",
+      "x": 198.2,
+      "y": 50.59,
+      "distance": 407,
+      "date": "2025-07-22"
+    },
+    {
+      "player": "Kyle Schwarber",
+      "team": "Cole",
+      "x": 148.83,
+      "y": 34.76,
+      "distance": 410,
+      "date": "2025-07-22"
+    },
+    {
+      "player": "Lawrence Butler",
+      "team": "Rob",
+      "x": 212.42,
+      "y": 77.39,
+      "distance": 368,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Cody Bellinger",
+      "team": "Al",
+      "x": 193.55,
+      "y": 49.29,
+      "distance": 405,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Adolis García",
+      "team": "Cole",
+      "x": 85.46,
+      "y": 31.31,
+      "distance": 426,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Ryan McMahon",
+      "team": "Zyns",
+      "x": 49.09,
+      "y": 51.26,
+      "distance": 410,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Marcus Semien",
+      "team": "Mat",
+      "x": 14.72,
+      "y": 100.24,
+      "distance": 364,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Ben Rice",
+      "team": "Brodie",
+      "x": 192.76,
+      "y": 56.5,
+      "distance": 389,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Corey Seager",
+      "team": "Brodie",
+      "x": 182.01,
+      "y": 47.43,
+      "distance": 399,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Cal Raleigh",
+      "team": "Rob",
+      "x": 216.03,
+      "y": 68.45,
+      "distance": 391,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Andy Pages",
+      "team": "Brodie",
+      "x": 49.92,
+      "y": 61.99,
+      "distance": 387,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Shohei Ohtani",
+      "team": "Zyns",
+      "x": 54.92,
+      "y": 61.48,
+      "distance": 405,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Rafael Devers",
+      "team": "Nate",
+      "x": 220.56,
+      "y": 88.94,
+      "distance": 357,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Matt Chapman",
+      "team": "Brodie",
+      "x": 202.97,
+      "y": 62.86,
+      "distance": 391,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Mike Trout",
+      "team": "Rob",
+      "x": 176.82,
+      "y": 54.05,
+      "distance": 380,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Pete Alonso",
+      "team": "Steve",
+      "x": 69.43,
+      "y": 30.16,
+      "distance": 439,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Rafael Devers",
+      "team": "Nate",
+      "x": 192.28,
+      "y": 46.59,
+      "distance": 410,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Vinnie Pasquantino",
+      "team": "Zyns",
+      "x": 205.31,
+      "y": 54.71,
+      "distance": 406,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Salvador Perez",
+      "team": "Cole",
+      "x": 54.63,
+      "y": 60.96,
+      "distance": 384,
+      "date": "2025-07-23"
+    },
+    {
+      "player": "Aaron Judge",
+      "team": "Jak",
+      "x": 163.98,
+      "y": 43.33,
+      "distance": 398,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Kyle Schwarber",
+      "team": "Cole",
+      "x": 181.57,
+      "y": 42.97,
+      "distance": 409,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Bryce Harper",
+      "team": "Nate",
+      "x": 229.2,
+      "y": 53.16,
+      "distance": 439,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Nick Castellanos",
+      "team": "Mat",
+      "x": 18.04,
+      "y": 88.28,
+      "distance": 380,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Junior Caminero",
+      "team": "Al",
+      "x": 193.85,
+      "y": 68.88,
+      "distance": 363,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Corey Seager",
+      "team": "Brodie",
+      "x": 134.66,
+      "y": 23.5,
+      "distance": 434,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Bo Bichette",
+      "team": "Zyns",
+      "x": 40,
+      "y": 81.19,
+      "distance": 360,
+      "date": "2025-07-24"
+    },
+    {
+      "player": "Fernando Tatis Jr.",
+      "team": "Al",
+      "x": 184.84,
+      "y": 47.38,
+      "distance": 402,
+      "date": "2025-07-25"
+    },
+    {
+      "player": "Manny Machado",
+      "team": "Rob",
+      "x": 169.99,
+      "y": 39.96,
+      "distance": 408,
+      "date": "2025-07-25"
+    },
+    {
+      "player": "Spencer Torkelson",
+      "team": "Al",
+      "x": 17.39,
+      "y": 93.19,
+      "distance": 372,
+      "date": "2025-07-25"
+    },
+    {
+      "player": "Julio Rodríguez",
+      "team": "Cole",
+      "x": 230.14,
+      "y": 82.42,
+      "distance": 377,
+      "date": "2025-07-25"
+    },
+    {
+      "player": "Randy Arozarena",
+      "team": "Rob",
+      "x": 25,
+      "y": 95.13,
+      "distance": 376,
+      "date": "2025-07-25"
     }
   ],
   "longestHr": {
