@@ -1,9 +1,9 @@
 {
-  "updated": "2025-07-24T04:20:07.349Z",
+  "updated": "2025-07-25T04:49:46.898Z",
   "teams": [
     {
       "name": "Cole",
-      "total": 14
+      "total": 15
     },
     {
       "name": "Zyns",
@@ -12,6 +12,10 @@
     {
       "name": "Nick",
       "total": 13
+    },
+    {
+      "name": "Al",
+      "total": 11
     },
     {
       "name": "Nate",
@@ -26,16 +30,12 @@
       "total": 9
     },
     {
-      "name": "Al",
-      "total": 9
+      "name": "Rob",
+      "total": 8
     },
     {
       "name": "Jak",
       "total": 7
-    },
-    {
-      "name": "Rob",
-      "total": 6
     },
     {
       "name": "Steve",
@@ -62,8 +62,10 @@
     {
       "name": "Manny Machado",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          408
+        ]
       },
       "team": "Rob"
     },
@@ -71,9 +73,7 @@
       "name": "Mike Trout",
       "total": {
         "total": 1,
-        "distances": [
-          380
-        ]
+        "distances": []
       },
       "team": "Rob"
     },
@@ -88,8 +88,10 @@
     {
       "name": "Randy Arozarena",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          376
+        ]
       },
       "team": "Rob"
     },
@@ -121,9 +123,7 @@
       "name": "Aaron Judge",
       "total": {
         "total": 2,
-        "distances": [
-          398
-        ]
+        "distances": []
       },
       "team": "Jak"
     },
@@ -171,9 +171,7 @@
       "name": "Jackson Holliday",
       "total": {
         "total": 2,
-        "distances": [
-          356
-        ]
+        "distances": []
       },
       "team": "Jak"
     },
@@ -197,9 +195,7 @@
       "name": "Shohei Ohtani",
       "total": {
         "total": 5,
-        "distances": [
-          441
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -231,9 +227,7 @@
       "name": "Bo Bichette",
       "total": {
         "total": 1,
-        "distances": [
-          360
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -249,10 +243,7 @@
       "name": "Vinnie Pasquantino",
       "total": {
         "total": 2,
-        "distances": [
-          406,
-          414
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -276,9 +267,7 @@
       "name": "Kyle Schwarber",
       "total": {
         "total": 4,
-        "distances": [
-          409
-        ]
+        "distances": []
       },
       "team": "Cole"
     },
@@ -309,8 +298,10 @@
     {
       "name": "Julio Rodríguez",
       "total": {
-        "total": 0,
-        "distances": []
+        "total": 1,
+        "distances": [
+          377
+        ]
       },
       "team": "Cole"
     },
@@ -326,9 +317,7 @@
       "name": "Salvador Perez",
       "total": {
         "total": 5,
-        "distances": [
-          384
-        ]
+        "distances": []
       },
       "team": "Cole"
     },
@@ -352,9 +341,7 @@
       "name": "Pete Crow-Armstrong",
       "total": {
         "total": 2,
-        "distances": [
-          383
-        ]
+        "distances": []
       },
       "team": "Al"
     },
@@ -362,17 +349,17 @@
       "name": "Junior Caminero",
       "total": {
         "total": 3,
-        "distances": [
-          363
-        ]
+        "distances": []
       },
       "team": "Al"
     },
     {
       "name": "Fernando Tatis Jr.",
       "total": {
-        "total": 0,
-        "distances": []
+        "total": 1,
+        "distances": [
+          402
+        ]
       },
       "team": "Al"
     },
@@ -387,8 +374,10 @@
     {
       "name": "Spencer Torkelson",
       "total": {
-        "total": 0,
-        "distances": []
+        "total": 1,
+        "distances": [
+          372
+        ]
       },
       "team": "Al"
     },
@@ -428,9 +417,7 @@
       "name": "Pete Alonso",
       "total": {
         "total": 1,
-        "distances": [
-          439
-        ]
+        "distances": []
       },
       "team": "Steve"
     },
@@ -526,9 +513,7 @@
       "name": "Bryce Harper",
       "total": {
         "total": 4,
-        "distances": [
-          439
-        ]
+        "distances": []
       },
       "team": "Nate"
     },
@@ -544,10 +529,7 @@
       "name": "Rafael Devers",
       "total": {
         "total": 2,
-        "distances": [
-          357,
-          410
-        ]
+        "distances": []
       },
       "team": "Nate"
     },
@@ -587,9 +569,7 @@
       "name": "Ketel Marte",
       "total": {
         "total": 1,
-        "distances": [
-          420
-        ]
+        "distances": []
       },
       "team": "Brodie"
     },
@@ -597,9 +577,7 @@
       "name": "Corey Seager",
       "total": {
         "total": 2,
-        "distances": [
-          434
-        ]
+        "distances": []
       },
       "team": "Brodie"
     },
@@ -647,9 +625,7 @@
       "name": "Matt Chapman",
       "total": {
         "total": 2,
-        "distances": [
-          391
-        ]
+        "distances": []
       },
       "team": "Brodie"
     },
@@ -785,9 +761,7 @@
       "name": "Nick Castellanos",
       "total": {
         "total": 1,
-        "distances": [
-          380
-        ]
+        "distances": []
       },
       "team": "Mat"
     },
