@@ -1,5 +1,5 @@
 {
-  "updated": "2025-07-27T14:21:48.986Z",
+  "updated": "2025-07-27T14:46:58.994Z",
   "teams": [
     {
       "name": "Nick",
@@ -19,7 +19,7 @@
     },
     {
       "name": "Nate",
-      "total": 13
+      "total": 12
     },
     {
       "name": "Rob",
@@ -514,9 +514,8 @@
     {
       "name": "Bobby Witt Jr.",
       "total": {
-        "total": 2,
+        "total": 1,
         "distances": [
-          449,
           449
         ]
       },
@@ -680,7 +679,9 @@
       "name": "Shea Langeliers",
       "total": {
         "total": 4,
-        "distances": []
+        "distances": [
+          369
+        ]
       },
       "team": "Nick"
     },
@@ -1284,12 +1285,84 @@
       "date": "2025-07-25"
     },
     {
+      "player": "Bryce Harper",
+      "team": "Nate",
+      "x": 180.32,
+      "y": 35.36,
+      "distance": 425,
+      "date": "2025-07-26"
+    },
+    {
+      "player": "Shohei Ohtani",
+      "team": "Zyns",
+      "x": 132.64,
+      "y": 31.56,
+      "distance": 414,
+      "date": "2025-07-26"
+    },
+    {
+      "player": "Teoscar Hernández",
+      "team": "Zyns",
+      "x": 30.81,
+      "y": 73.65,
+      "distance": 387,
+      "date": "2025-07-26"
+    },
+    {
+      "player": "Oneil Cruz",
+      "team": "Zyns",
+      "x": 180.7,
+      "y": 41.72,
+      "distance": 410,
+      "date": "2025-07-26"
+    },
+    {
+      "player": "Luis García Jr.",
+      "team": "Zyns",
+      "x": 200.79,
+      "y": 59.63,
+      "distance": 390,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "George Springer",
+      "team": "Nick",
+      "x": 185.82,
+      "y": 52.95,
+      "distance": 390,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Vladimir Guerrero Jr.",
+      "team": "Jak",
+      "x": 61.91,
+      "y": 46.64,
+      "distance": 408,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Ian Happ",
+      "team": "Zyns",
+      "x": 173.72,
+      "y": 48.5,
+      "distance": 391,
+      "date": "2025-07-27"
+    },
+    {
       "player": "Bobby Witt Jr.",
       "team": "Nate",
       "x": 44.72,
       "y": 35.58,
       "distance": 449,
       "date": "2025-07-27"
+    },
+    {
+      "player": "Shea Langeliers",
+      "team": "Nick",
+      "x": 52.59,
+      "y": 62.85,
+      "distance": 369,
+      "date": "2025-07-26"
     },
     {
       "player": "Lawrence Butler",
@@ -1297,14 +1370,6 @@
       "x": 218.93,
       "y": 66.41,
       "distance": 403,
-      "date": "2025-07-27"
-    },
-    {
-      "player": "Bobby Witt Jr.",
-      "team": "Nate",
-      "x": 44.72,
-      "y": 35.58,
-      "distance": 449,
       "date": "2025-07-27"
     },
     {
