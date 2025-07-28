@@ -1,9 +1,9 @@
 {
-  "updated": "2025-07-27T14:46:58.994Z",
+  "updated": "2025-07-28T04:50:23.474Z",
   "teams": [
     {
       "name": "Nick",
-      "total": 22
+      "total": 23
     },
     {
       "name": "Cole",
@@ -14,24 +14,24 @@
       "total": 20
     },
     {
+      "name": "Brodie",
+      "total": 14
+    },
+    {
+      "name": "Rob",
+      "total": 13
+    },
+    {
       "name": "Al",
       "total": 13
     },
     {
-      "name": "Nate",
+      "name": "Mat",
       "total": 12
     },
     {
-      "name": "Rob",
-      "total": 11
-    },
-    {
-      "name": "Brodie",
-      "total": 11
-    },
-    {
-      "name": "Mat",
-      "total": 10
+      "name": "Nate",
+      "total": 12
     },
     {
       "name": "Jak",
@@ -46,9 +46,9 @@
     {
       "name": "Cal Raleigh",
       "total": {
-        "total": 2,
+        "total": 3,
         "distances": [
-          416
+          421
         ]
       },
       "team": "Rob"
@@ -72,8 +72,10 @@
     {
       "name": "Mike Trout",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          443
+        ]
       },
       "team": "Rob"
     },
@@ -89,9 +91,7 @@
       "name": "Randy Arozarena",
       "total": {
         "total": 3,
-        "distances": [
-          411
-        ]
+        "distances": []
       },
       "team": "Rob"
     },
@@ -107,9 +107,7 @@
       "name": "Lawrence Butler",
       "total": {
         "total": 2,
-        "distances": [
-          403
-        ]
+        "distances": []
       },
       "team": "Rob"
     },
@@ -157,9 +155,7 @@
       "name": "Vladimir Guerrero Jr.",
       "total": {
         "total": 2,
-        "distances": [
-          408
-        ]
+        "distances": []
       },
       "team": "Jak"
     },
@@ -199,9 +195,7 @@
       "name": "Shohei Ohtani",
       "total": {
         "total": 6,
-        "distances": [
-          414
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -209,9 +203,7 @@
       "name": "Oneil Cruz",
       "total": {
         "total": 1,
-        "distances": [
-          410
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -243,9 +235,7 @@
       "name": "Teoscar Hernández",
       "total": {
         "total": 2,
-        "distances": [
-          387
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -261,9 +251,7 @@
       "name": "Ian Happ",
       "total": {
         "total": 2,
-        "distances": [
-          391
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -271,9 +259,7 @@
       "name": "Luis García Jr.",
       "total": {
         "total": 1,
-        "distances": [
-          390
-        ]
+        "distances": []
       },
       "team": "Zyns"
     },
@@ -313,9 +299,7 @@
       "name": "Julio Rodríguez",
       "total": {
         "total": 4,
-        "distances": [
-          422
-        ]
+        "distances": []
       },
       "team": "Cole"
     },
@@ -515,9 +499,7 @@
       "name": "Bobby Witt Jr.",
       "total": {
         "total": 1,
-        "distances": [
-          449
-        ]
+        "distances": []
       },
       "team": "Nate"
     },
@@ -525,9 +507,7 @@
       "name": "Bryce Harper",
       "total": {
         "total": 5,
-        "distances": [
-          425
-        ]
+        "distances": []
       },
       "team": "Nate"
     },
@@ -574,8 +554,10 @@
     {
       "name": "Juan Soto",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          374
+        ]
       },
       "team": "Brodie"
     },
@@ -638,8 +620,11 @@
     {
       "name": "Matt Chapman",
       "total": {
-        "total": 2,
-        "distances": []
+        "total": 4,
+        "distances": [
+          413,
+          410
+        ]
       },
       "team": "Brodie"
     },
@@ -678,9 +663,9 @@
     {
       "name": "Shea Langeliers",
       "total": {
-        "total": 4,
+        "total": 5,
         "distances": [
-          369
+          378
         ]
       },
       "team": "Nick"
@@ -697,9 +682,7 @@
       "name": "George Springer",
       "total": {
         "total": 2,
-        "distances": [
-          390
-        ]
+        "distances": []
       },
       "team": "Nick"
     },
@@ -747,17 +730,17 @@
       "name": "Taylor Ward",
       "total": {
         "total": 3,
-        "distances": [
-          404
-        ]
+        "distances": []
       },
       "team": "Mat"
     },
     {
       "name": "Alex Bregman",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          400
+        ]
       },
       "team": "Mat"
     },
@@ -780,8 +763,10 @@
     {
       "name": "Nick Castellanos",
       "total": {
-        "total": 1,
-        "distances": []
+        "total": 2,
+        "distances": [
+          363
+        ]
       },
       "team": "Mat"
     },
@@ -1403,6 +1388,70 @@
       "y": 69.32,
       "distance": 416,
       "date": "2025-07-27"
+    },
+    {
+      "player": "Nick Castellanos",
+      "team": "Mat",
+      "x": 30.03,
+      "y": 87.26,
+      "distance": 363,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Shea Langeliers",
+      "team": "Nick",
+      "x": 23.37,
+      "y": 84.64,
+      "distance": 378,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Alex Bregman",
+      "team": "Mat",
+      "x": 62.12,
+      "y": 66.55,
+      "distance": 400,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Mike Trout",
+      "team": "Rob",
+      "x": 143.42,
+      "y": 20.14,
+      "distance": 443,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Cal Raleigh",
+      "team": "Rob",
+      "x": 135.03,
+      "y": 28.89,
+      "distance": 421,
+      "date": "2025-07-27"
+    },
+    {
+      "player": "Matt Chapman",
+      "team": "Brodie",
+      "x": 64.89,
+      "y": 43.25,
+      "distance": 413,
+      "date": "2025-07-28"
+    },
+    {
+      "player": "Matt Chapman",
+      "team": "Brodie",
+      "x": 105.87,
+      "y": 34.63,
+      "distance": 410,
+      "date": "2025-07-28"
+    },
+    {
+      "player": "Juan Soto",
+      "team": "Brodie",
+      "x": 33.03,
+      "y": 78.78,
+      "distance": 374,
+      "date": "2025-07-28"
     }
   ],
   "longestHr": {
