@@ -1,5 +1,5 @@
 {
-  "updated": "2025-08-01T12:38:12.949Z",
+  "updated": "2025-08-01T12:43:58.525Z",
   "teams": [
     {
       "name": "Nick",
@@ -128,9 +128,8 @@
     {
       "name": "Elly De La Cruz",
       "total": {
-        "total": 2,
+        "total": 1,
         "distances": [
-          415,
           415
         ]
       },
